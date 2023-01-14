@@ -80,7 +80,7 @@ public abstract class UI
 //		0=非空1=空
 		for(int j=0;j<width + 2;j++)
 		{
-			strings[0] = strings[0] + vbars;
+			strings[0] = strings[0] + hbar;
 			strings[1] = strings[1] + voidbars;
 		}
 		

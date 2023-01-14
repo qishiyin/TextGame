@@ -29,12 +29,11 @@ public class AnButton extends UI
 	
 	
 	
-	public AnButton(int x,int y,int height,int width)
-	{
-		super(x,y,height,width);
-		
-		ui();
-	}
+//	public AnButton(int x,int y,int height,int width)
+//	{
+//		super(x,y,height,width);
+//		ui();
+//	}
 
 	public StringBuilder ui(String title,int id) 
 	{
@@ -56,7 +55,7 @@ public class AnButton extends UI
 		
 		titlestring = title + titlevoid;
 		
-		titlestring = titlestring + String.format("(%d)",id );
+		titlestring +=  String.format("(%d)",id );
 
 //		对集合的整合
 		for(int i=0;i<(height + 2);i++)
@@ -84,37 +83,18 @@ public class AnButton extends UI
 		
 		return stringbuilder;
 	}
+
+
+
+@Override
+public StringBuilder ui() 
+{
+	// TODO Auto-generated method stub
+	return null;
+}
 	
 	
-	@Override
-	public StringBuilder ui() 
-	{
-		// TODO Auto-generated method stub
-//		首行，尾行，空行的填充体
-		
-		
-		for(int i=0;i<(height + 2);i++)
-		{
-			if(i==0)
-			{
-				maparray.put(i, String.format("%s%s%s", lefttop,strings[0],righttop));
-			}else if(i==(height + 2) - 1)
-			{
-				maparray.put(i, String.format("%s%s%s", leftdown,strings[0],rightdown));
-			}else 
-			{
-				maparray.put(i, String.format("%s%s%s", vbar,strings[1],vbar));
-			}
-		}
-		
-		for(int i=0;i<maparray.size();i++)
-		{
-			stringbuilder.append(String.format("%s\n", maparray.get(i)));
-		}
-		
-		
-		return stringbuilder;
-	}
+
 	
 	
 	
